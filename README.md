@@ -3,7 +3,7 @@ CLI for submitting code to NetOI.
 
 ## How to use
 
-'''(shell)
+```(shell)
 usage: check [-h] [--verbose] --source SOURCE --problem PROBLEM
              [--language {cpp,java,py}] [--html HTML]
 
@@ -19,4 +19,4 @@ optional arguments:
   --language {cpp,java,py}, -l {cpp,java,py}
                         Specify programming language
   --html HTML           Save results in html
-'''
+```
