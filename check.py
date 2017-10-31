@@ -6,7 +6,7 @@ import requests
 from lxml import html
 from tabulate import tabulate
 
-URL = 'http://www3.olymp.vinnica.ua/cgi-bin/v_olymp/i2004/members4.py'
+URL = 'https://www3.olymp.vinnica.ua/cgi-bin/v_olymp/i2004/members4.py'
 PATH = '/html/body/div/table/tr/td/table/tr[4]/td[3]/' \
 'table/tr[2]/td/table/tr/td[2]/table/tr'
 
