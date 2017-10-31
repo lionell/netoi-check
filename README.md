@@ -4,19 +4,19 @@ CLI for submitting code to NetOI.
 ## How to use
 
 ```(shell)
-usage: check [-h] [--verbose] --source SOURCE --problem PROBLEM
-             [--language {cpp,java,py}] [--html HTML]
+usage: netoi-check [-h] --problem PROBLEM --source SOURCE
+                   [--language {cpp,java,py3,pas}] [--silent] [--html HTML]
 
 Send problem to check
 
 optional arguments:
   -h, --help            show this help message and exit
-  --verbose, -v         Verbose mode
-  --source SOURCE, -s SOURCE
-                        Source to check
   --problem PROBLEM, -p PROBLEM
                         Problem name
-  --language {cpp,java,py}, -l {cpp,java,py}
+  --source SOURCE, -s SOURCE
+                        Source to check
+  --language {cpp,java,py3,pas}, -l {cpp,java,py3,pas}
                         Specify programming language
+  --silent              Silent mode
   --html HTML           Save results in html
 ```

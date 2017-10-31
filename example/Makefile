@@ -10,4 +10,4 @@ main: main.cc
 	g++ -o main main.cc
 
 send: main.cc
-	check -s main.cc -p eclipse
+	netoi-check -s main.cc -p eclipse
