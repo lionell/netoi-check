@@ -1,11 +1,13 @@
-all:
-	g++ -o main main.cpp
+all: send
 
 clean:
 	rm main
 
-run: all
+run: main
 	./main
 
-send:
-	check -s main.cpp -p eclipse
+main: main.cc
+	g++ -o main main.cc
+
+send: main.cc
+	check -s main.cc -p eclipse
