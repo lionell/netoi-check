@@ -1,6 +1,6 @@
 import os
 import requests
-from lxml import html
+from lxml import html as lhtml
 from tabulate import tabulate
 
 URL = 'https://www3.olymp.vinnica.ua/cgi-bin/v_olymp/i2004/members4.py'
@@ -12,12 +12,14 @@ def ext_to_lang(ext):
         return 'py3'
     elif ext == '.cpp':
         return 'cpp'
+    elif ext == '.cc':
+        return 'cpp'
     elif ext == '.java':
         return 'java'
     elif ext == '.pas':
         return 'pas'
 
-def check(problem, source, language, verbose, html):
+def check(problem, source, language, silent, html):
     if language is None:
         ext = os.path.splitext(source)[1]
         language = ext_to_lang(ext)
@@ -45,7 +47,7 @@ def check(problem, source, language, verbose, html):
     if html is not None:
         with open(html, 'w+') as out:
             out.write(r.text) 
-    tree =  html.fromstring(r.content)
+    tree =  lhtml.fromstring(r.content)
     rows = tree.xpath(PATH)[1:] # First row contains th
 
     table = []

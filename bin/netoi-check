@@ -12,7 +12,7 @@ parser.add_argument('--source', '-s', required=True,
 parser.add_argument('--language', '-l',
         choices=['cpp', 'java', 'py3', 'pas'],
         help='Specify programming language')
-parser.add_argument('--silent', action='store_false',
+parser.add_argument('--silent', action='store_true',
         help='Silent mode')
 parser.add_argument('--html',
         help='Save results in html')

@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='netoi_check',
-      version='0.1',
+      version='0.2',
       description='CLI for solution submission to NetOI',
       url='http://github.com/lionell/netoi-check',
       author='Ruslan Sakevych',
