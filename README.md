@@ -1,5 +1,5 @@
 # Submit
-CLI for submitting code to NetOI.
+CLI for submitting code to [NetOI](https://netoi.org.ua).
 
 ## How to use
 
