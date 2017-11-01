@@ -8,7 +8,11 @@ setup(name='netoi_check',
       author_email='xlionell@gmail.com',
       license='MIT',
       packages=['netoi_check'],
-      scripts=['bin/netoi-check'],
-      install_requires=['lxml', 'tabulate'],
-      python_requires='>=3',
+      entry_points={
+          'console_scripts': [
+              'netoi-check=netoi_check:main',
+          ],
+      },
+      install_requires=['requests', 'lxml', 'tabulate'],
+      #python_requires='>=3',
       zip_safe=False)

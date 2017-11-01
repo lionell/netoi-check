@@ -1,4 +1,5 @@
 import os
+import argparse
 import requests
 from lxml import html as lhtml
 from tabulate import tabulate
@@ -46,7 +47,7 @@ def check(problem, source, language, silent, html):
 
     if html is not None:
         with open(html, 'w+') as out:
-            out.write(r.text) 
+            out.write(r.text)
     tree =  lhtml.fromstring(r.content)
     rows = tree.xpath(PATH)[1:] # First row contains th
 
@@ -57,3 +58,24 @@ def check(problem, source, language, silent, html):
         table.append([num, res, time])
 
     return tabulate(table, headers=['Number', 'Result', 'Time'])
+
+def main():
+    parser = argparse.ArgumentParser(
+            description='Send problem to check')
+    parser.add_argument('--problem', '-p', required=True,
+            help='Problem name')
+    parser.add_argument('--source', '-s', required=True,
+            help='Source to check')
+    parser.add_argument('--language', '-l',
+            choices=['cpp', 'java', 'py3', 'pas'],
+            help='Specify programming language')
+    parser.add_argument('--silent', action='store_true',
+            help='Silent mode')
+    parser.add_argument('--html',
+            help='Save results in html')
+    args = parser.parse_args()
+
+    res = check(problem=args.problem, source=args.source,
+                language=args.language, silent=args.silent,
+                html=args.html)
+    print(res)
