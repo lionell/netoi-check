@@ -1,10 +1,10 @@
-# Submit
-CLI for submitting code to [NetOI](https://netoi.org.ua).
+# NetOI-check
+CLI for submitting problem solutions to [NetOI](https://netoi.org.ua).
 
 ## Installation
 
 This module is Python 2/3 compatible so, you can use
-[PIP](https://pypi.python.org/pypi/pip) with either of version.
+[pip](https://pypi.python.org/pypi/pip) for one of these versions.
 
 ```(shell)
 $ pip install netoi-check
