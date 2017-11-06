@@ -1,6 +1,15 @@
 # Submit
 CLI for submitting code to [NetOI](https://netoi.org.ua).
 
+## Installation
+
+This module is Python 2/3 compatible so, you can use
+[PIP](https://pypi.python.org/pypi/pip) with either of version.
+
+```(shell)
+$ pip install netoi-check
+```
+
 ## How to use
 
 ```(shell)
@@ -20,3 +29,7 @@ optional arguments:
   --silent              Silent mode
   --html HTML           Save results in html
 ```
+
+## License
+
+MIT
